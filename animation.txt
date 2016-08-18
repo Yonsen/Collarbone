@@ -8,7 +8,7 @@ animation: textShow .8s ease-in-out 1s both;
 
 循环次数：
 默认值：1
-infinite： 无限循环
+infinite： 无限循环 
 <number>： 指定对象动画的具体循环次数
 
 过渡函数：
