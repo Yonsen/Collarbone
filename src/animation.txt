@@ -30,6 +30,7 @@ NameVirtualHost *:80
    DocumentRoot ../htdocs/wx4.0/dev
    ServerName w4.ininin.com
 </VirtualHost>
+
 <VirtualHost *:80>
    DocumentRoot ../htdocs/wx4.1/dev
    ServerName w41.ininin.com
