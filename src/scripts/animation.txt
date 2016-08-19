@@ -1,0 +1,36 @@
+animation: name duration timing-function delay iteration-count direction fill-mode;
+animation:动画名称 持续时间 过渡函数 延迟时间 循环次数 是否反向运动 对象动画时间之外的状态
+animation: textShow .8s ease-in-out 1s both;
+
+持续时间：毫秒
+
+延迟时间：毫秒
+
+循环次数：
+默认值：1
+infinite： 无限循环 
+<number>： 指定对象动画的具体循环次数
+
+过渡函数：
+linear： 线性过渡
+ease： 平滑过渡
+ease-in： 由慢到快
+ease-out： 由快到慢
+ease-in-out： 由慢到快再到慢
+
+对象动画时间之外的状态：
+none： 默认值。不设置对象动画之外的状态 
+forwards： 设置对象状态为动画结束时的状态 
+backwards： 设置对象状态为动画开始时的状态 
+both： 设置对象状态为动画结束或开始的状态 
+
+
+NameVirtualHost *:80
+<VirtualHost *:80>
+   DocumentRoot ../htdocs/wx4.0/dev
+   ServerName w4.ininin.com
+</VirtualHost>
+<VirtualHost *:80>
+   DocumentRoot ../htdocs/wx4.1/dev
+   ServerName w41.ininin.com
+</VirtualHost>
