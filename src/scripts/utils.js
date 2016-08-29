@@ -40,4 +40,5 @@ define("utils", ["utils/base", "libs/md5", "libs/sha1", "libs/base64", "utils/me
         str = (str||location.search).replace(/^\?|\#+/, ""); //获取url中'?'符后的字符串
         return Utils.Transfer.decodeHashString(str, sign, flag);
     };
+    return Utils;
 });

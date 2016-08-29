@@ -22,7 +22,7 @@ require(["base", "underscore", "backbone", "tools"], function($, _, Backbone, To
         events: function () {
             var _this = this;
             _this.$menu.on("click.a", "a", function (e) {
-                e.preventDefault();
+                //e.preventDefault();
                 var $this = $(this),
                     $li = $this.closest("li"),
                     $ul = $this.next("ul");
@@ -48,7 +48,62 @@ require(["base", "underscore", "backbone", "tools"], function($, _, Backbone, To
             $(window).on("resize", function (e) {
                 _this.reset();
             });
+        },
+        get: function () {
+            return Index.$content.html('<div/>').children();
         }
     };
     Index.init();
+    var Router = Backbone.Router.extend({
+        initialize: function () {
+            console.log("Route initialize");
+        },
+        routes: {
+            "": "index",
+            "user": "userList",
+            "user/:101": "userForm",
+            "article": "articleList",
+            "article/:101": "articleForm",
+            "search/:query": "search", // #search/kiwis
+            "search/:query/p:page": "search" // #search/kiwis/p7
+        },
+        userList: function() {
+            var $cont = Index.get();
+            require(["views/user/list"], function (UserListView) {
+                $cont.html(new UserListView({
+                    el: $cont
+                }).el);
+            });
+        },
+        userForm: function(id) {
+            var $cont = Index.get();
+            require(["views/user/form"], function (UserFormView) {
+                $cont.html(new UserFormView({
+                    id: id,
+                    el: $cont
+                }).el);
+            });
+        },
+        articleList: function() {
+            var $cont = Index.get();
+            require(["views/article/list"], function (ArticleListView) {
+                $cont.html(new ArticleListView({
+                    el: $cont
+                }).el);
+            });
+        },
+        articleForm: function(id) {
+            var $cont = Index.get();
+            require(["views/article/form"], function (ArticleFormView) {
+                $cont.html(new ArticleFormView({
+                    id: id,
+                    el: $cont
+                }).el);
+            });
+        },
+        search: function(query, page) {debugger
+        }
+    });
+    new Router();
+    Backbone.history.start();
 });

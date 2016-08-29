@@ -1,11 +1,11 @@
 /**
  * Created by wu on 2016/8/26.
  */
-define("collections/users", ["base", "underscore", "backbone", "tools", "models/user"], function($, _, Backbone, Tools, User){
+define("collections/articles", ["base", "underscore", "backbone", "tools", "models/article"], function($, _, Backbone, Tools, Article){
     'use strict';
     return Backbone.Collection.extend({
         url: "/data/user/list.json",
-        model: User,
+        model: Article,
         completed: function () {
             return this.where({completed: true});
         },
