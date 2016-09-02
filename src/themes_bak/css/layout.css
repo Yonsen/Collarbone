@@ -1,0 +1,249 @@
+/* CSS Document */
+html {
+    height: 100%;
+}
+body {
+    background: #f6f6f6;
+    min-height: 100%;
+}
+.header {
+    position: fixed;
+    z-index: 120;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.logo {
+    width: 240px;
+    height: 100%;
+    background: #35baf6;
+    display: block;
+    float: left;
+}
+.toolbar {
+    padding: 0 10px;
+    text-align: right;
+    overflow: hidden;
+}
+.toolbar span,
+.toolbar img,
+.toolbar i {
+    vertical-align: middle;
+}
+.toolbar .fa {
+    color: #999;
+    font-size: 18px;
+    margin: 0 5px;
+}
+.toolbar .portrait {
+    width: 40px;
+    height: 40px;
+    margin: 10px 5px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.menu {
+    position: fixed;
+    z-index: 110;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    padding: 60px 0 30px;
+    background: #32404e;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.menu li {
+    height: 60px;
+    overflow: hidden;
+}
+.menu li li a {
+    padding-left: 40px;
+}
+.menu .fa {
+    font-size: 20px;
+    line-height: 60px;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+.menu .fa.fr {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}
+.menu a {
+    color: #adb3b8;
+    font-size: 14px;
+    line-height: 60px;
+    height: 60px;
+    padding: 0 15px;
+    display: block;
+}
+.menu a:hover {
+    color: #fff;
+    background: #3c4a57;
+}
+.menu a.selected {
+    padding-left: 10px;
+    background: #475360;
+    border-left: 5px solid #35baf6;
+}
+.menu li li a.selected {
+    padding-left: 35px;
+}
+.main {
+    padding: 60px 0 30px 240px;
+    overflow: hidden;
+}
+.content {
+    margin: 15px;
+}
+.footer {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    padding: 0 15px 0 255px;
+    background: #fff;
+}
+.panel {
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+table {
+    min-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+table th,
+table td {
+    padding: 5px 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+table tr:nth-child(2n) th,
+table tr:nth-child(2n) td {
+    background: #f6f6f6;
+}
+table thead th {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+table thead th:first-child {
+    border-left: 0;
+}
+ table tr:hover th,
+ table tr:hover td {
+     background: #e6f1f6;
+ }
+table tr.selected th,
+table tr.selected td {
+    background: #ffefbb;
+}
+
+/*弹出框*/
+.popover {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+.popover .popover-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    filter: alpha(opacity=80);
+}
+.popover .popover-panel {
+    position: relative;
+    width: 600px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.popover .popover-head {
+    height: 48px;
+    line-height: 48px;
+    background: #fafafa;
+    border-bottom: 1px solid #e5e5e5;
+}
+.popover .popover-title {
+    padding-left: 15px;
+    overflow: hidden;
+}
+.popover .popover-head .fa-close {
+    color: #999;
+    width: 48px;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+.popover .popover-body {
+    padding: 15px;
+}
+.popover .popover-foot {
+    padding: 15px;
+    background: #fafafa;
+    border-top: 1px solid #e5e5e5;
+}
+.popover-open {
+    z-index: 1010;
+    opacity: 1;
+}
+.popover-cfm .popover-foot,
+.popover-alt .popover-foot,
+.popover-suc .popover-foot,
+.popover-msg .popover-foot,
+.popover-err .popover-foot {
+    padding: 0;
+}
+.popover-cfm .popover-foot .btn,
+.popover-alt .popover-foot .btn,
+.popover-suc .popover-foot .btn,
+.popover-msg .popover-foot .btn,
+.popover-err .popover-foot .btn {
+    border: 0;
+    height: 48px;
+    line-height: 48px;
+}
+.popover-cfm .popover-body .col:first-child,
+.popover-alt .popover-body .col:first-child,
+.popover-suc .popover-body .col:first-child,
+.popover-msg .popover-body .col:first-child,
+.popover-err .popover-body .col:first-child {
+    color: #f00;
+    font-size: 60px;
+    text-align: right;
+    width: 90px;
+    padding: 0 15px;
+}
+.popover-alt .fa-exclamation-circle {
+    color: #f0ad4e;
+}
+.popover-suc .fa-check-circle {
+    color: #5cb85c;
+}
+.popover-msg .fa-exclamation-circle {
+    color: #5bc0de;
+}
+.popover-err .fa-exclamation-circle {
+    color: #d9534f;
+}

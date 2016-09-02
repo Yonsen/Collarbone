@@ -44,6 +44,7 @@ define("views/user/list", ["base", "underscore", "backbone", "tools", "collectio
                 tagName: "tr",
                 template: _this.itemTemplate
             }).render().el);
+            Tools.tableCheckAll(_this.$el);
             return _this;
         },
         addAll: function () {

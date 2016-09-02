@@ -5,9 +5,8 @@ require(["base", "underscore", "backbone", "tools"], function($, _, Backbone, To
     'use strict';
     var Index = {
         $header: $("#header"),
-        $footer: $("#footer"),
         $menu: $("#menu"),
-        $main: $("#main"),
+        $wrapper: $("#wrapper"),
         $content: $("#content"),
         init: function () {
             var _this = this;
@@ -15,9 +14,7 @@ require(["base", "underscore", "backbone", "tools"], function($, _, Backbone, To
             _this.events();
         },
         reset: function () {
-            var _this = this,
-                wh = $(window).height(); //窗口高度
-            _this.$main.css("min-height", wh);
+            var _this = this;
         },
         events: function () {
             var _this = this;
@@ -61,45 +58,41 @@ require(["base", "underscore", "backbone", "tools"], function($, _, Backbone, To
         routes: {
             "": "index",
             "user": "userList",
-            "user/:101": "userForm",
+            "user/form/:id": "userForm",
+            "user/detail/:id": "userDetail",
             "article": "articleList",
-            "article/:101": "articleForm",
+            "article/form/:id": "articleForm",
+            "article/detail/:id": "articleDetail",
             "search/:query": "search", // #search/kiwis
             "search/:query/p:page": "search" // #search/kiwis/p7
         },
-        userList: function() {
-            var $cont = Index.get();
-            require(["views/user/list"], function (UserListView) {
-                $cont.html(new UserListView({
+        loadPage: function (viewName, id) {
+            var $cont = Index.get(),
+                param = {
                     el: $cont
-                }).el);
+                };
+            if(id) param.id = id;
+            require(["views/" + viewName], function (View) {
+                $cont.html(new View(param).el);
             });
+        },
+        userList: function() {
+            this.loadPage("user/list");
         },
         userForm: function(id) {
-            var $cont = Index.get();
-            require(["views/user/form"], function (UserFormView) {
-                $cont.html(new UserFormView({
-                    id: id,
-                    el: $cont
-                }).el);
-            });
+            this.loadPage("user/form", id);
+        },
+        userDetail: function(id) {
+            this.loadPage("user/detail", id);
         },
         articleList: function() {
-            var $cont = Index.get();
-            require(["views/article/list"], function (ArticleListView) {
-                $cont.html(new ArticleListView({
-                    el: $cont
-                }).el);
-            });
+            this.loadPage("article/list");
         },
         articleForm: function(id) {
-            var $cont = Index.get();
-            require(["views/article/form"], function (ArticleFormView) {
-                $cont.html(new ArticleFormView({
-                    id: id,
-                    el: $cont
-                }).el);
-            });
+            this.loadPage("article/form", id);
+        },
+        articleDetail: function(id) {
+            this.loadPage("article/detail", id);
         },
         search: function(query, page) {debugger
         }

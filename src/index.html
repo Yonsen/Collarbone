@@ -16,110 +16,98 @@
     <meta name="copyright" content="Copyright © 2016 xx.com. All rights reserved."/>
     <title>Home</title>
     <link type="image/x-icon" rel="shortcut icon" href="favicon.ico"/>
-    <link type="text/css" rel="stylesheet" href="themes/normalize.css"/>
-    <link type="text/css" rel="stylesheet" href="themes/css/font-awesome.min.css"/>
-    <link type="text/css" rel="stylesheet" href="themes/css/layout.css"/>
+    <link type="text/css" rel="stylesheet" href="themes/semantic.min.css"/>
+    <link type="text/css" rel="stylesheet" href="themes/layout.css"/>
     <link rel="dns-prefetch" href="//xx.xx.com"/>
 </head>
 <body>
-<div id="header" class="header">
-    <a class="logo" href="javascript:;"></a>
-    <div class="toolbar">
-        <i class="fa fa-sign-out"></i>
+<div id="header" class="ui attached borderless fixed main menu">
+    <div class="ui fluid container">
+        <span class="logo">
+            <img class="image" src="resources/logo.png"/>
+        </span>
+        <a class="item">
+            <i class="icon home"></i> Home
+        </a>
+        <a class="item">
+            <i class="icon list"></i> Home
+        </a>
+        <div class="right item">
+            <div class="ui input icon">
+                <input type="text" placeholder="Search...">
+                <i class="icon search"></i>
+            </div>
+            <i class="icon search"></i>
+            <i class="icon cloud"></i>
+            <i class="icon mail"></i>
+            <i class="icon alarm"></i>
+            <span>Admin</span>
+            <img class="portrait" src="resources/portrait/15.png"/>
+            <i class="fa fa-sign-out"></i>
+        </div>
     </div>
 </div>
-<ul id="menu" class="menu">
-    <li>
-        <a class="selected" href="#"><i class="fa fa-home"></i>主页</a>
-    </li>
-    <li>
-        <a href="#user"><i class="fa fa-tags"></i>用户</a>
-    </li>
-    <li>
-        <a href="#pages/tag/list"><i class="fa fa-tags"></i>标签</a>
-    </li>
-    <li>
-        <a href="#article"><i class="fa fa-list"></i>文章</a>
-    </li>
-    <li>
-        <a href="#"><i class="fa fa-comments"></i>评论</a>
-    </li>
-    <li>
-        <a href="#"><i class="fa fa-cog"></i>设置<i class="fa fa-caret-right fr"></i></a>
-        <ul>
-            <li><label class="fa fa-cog"><input type="checkbox"/></label><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="#"><i class="fa fa-users"></i>用户</a>
-    </li>
-</ul>
-<div id="main" class="main">
-    <div id="content" class="content">
-        <label><input type="checkbox" name="checkbox"><i class="fa fa-square-o"></i></label>
-        <label><input type="checkbox" name="checkbox"><i class="fa fa-square-o"></i></label>
-        <label><input type="checkbox" name="checkbox"><i class="fa fa-square-o"></i></label>
-        <label><input type="checkbox" name="checkbox" disabled><i class="fa fa-square-o"></i></label>
-        <label><input type="radio" name="radio"><i class="fa fa-circle-o"></i></label>
-        <label><input type="radio" name="radio"><i class="fa fa-circle-o"></i></label>
-        <label><input type="radio" name="radio"><i class="fa fa-circle-o"></i></label>
-        <label><input type="radio" name="radio" disabled><i class="fa fa-circle-o"></i></label>
-        <table class="panel">
-            <thead>
-            <tr>
-                <th>r</th>
-                <th>r</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>r</td>
-                <td>Voluptate dolore officia irure est.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>r</td>
-                <td>Voluptate dolore officia irure est.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>r</td>
-                <td>Voluptate dolore officia irure est.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>r</td>
-                <td>Voluptate dolore officia irure est.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>r</td>
-                <td>Voluptate dolore officia irure est.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
+<div class="full height">
+    <ul id="menu" class="ui vertical following inverted accordion text menu">
+        <li class="item">
+            <a class="active title" href="#home"><i class="icon home"></i>主页</a>
+        </li>
+        <li class="item">
+            <a class="active title" href="#user"><i class="icon users"></i>用户</a>
+        </li>
+        <li class="item">
+            <a class="active title" href="#tag"><i class="icon tags"></i>标签</a>
+        </li>
+        <li class="item">
+            <a class="active title" href="#article"><i class="icon list"></i>文章</a>
+        </li>
+        <li class="item">
+            <a class="active title" href="#article"><i class="icon book"></i>文章</a>
+        </li>
+        <li class="item">
+            <a class="active title" href="#comments"><i class="icon book"></i>评论</a>
+        </li>
+        <li class="item">
+            <a class="active title" href="#comments"><i class="dropdown icon"></i><i class="icon settings"></i>设置</a>
+            <div class="content menu active">
+                <a class="item" href="#brand-colors"><i class="icon protect"></i>Brand Colors</a>
+                <a class="item" href="#colors"><i class="icon setting"></i>Colors</a>
+            </div>
+        </li>
+    </ul>
+    <div id="wrapper" class="wrapper">
+        <div id="content">
+            <div class="ui cards">
+                <div class="card">
+                    <div class="content">
+                        <div class="header">Elliot Fu</div>
+                        <div class="description">Elliot Fu is a film-maker from New York. </div>
+                    </div>
+                    <div class="ui bottom attached button"><i class="add icon"></i> Add Friend </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="header">Veronika Ossi</div>
+                        <div class="description">Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying. </div>
+                    </div>
+                    <div class="ui bottom attached button"><i class="add icon"></i> Add Friend </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="header">Jenny Hess</div>
+                        <div class="description">Jenny is a student studying Media Management at the New School </div>
+                    </div>
+                    <div class="ui bottom attached button"><i class="add icon"></i> Add Friend </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div id="footer" class="footer">
-    copyright right
 </div>
 <script type="text/javascript" src="scripts/libs/require-2.2.0.min.js"></script>
 <script type="text/javascript" src="scripts/libs/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="scripts/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="scripts/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" src="scripts/libs/semantic.min.js"></script>
 <script type="text/javascript" src="scripts/requirejs-config.js"></script>
 <script type="text/javascript" src="scripts/tools.js"></script>
 <script type="text/javascript" src="scripts/index.js"></script>
