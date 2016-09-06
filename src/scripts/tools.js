@@ -1,12 +1,15 @@
 /**
  * Created by wu on 2016/8/26.
  */
-define("tools", ["base", "underscore", "utils"], function($, _, Utils){
+define("tools", ["base", "underscore", "utils", "jquery/datetimepicker"], function($, _, Utils){
     'use strict';
     //模板配置
     _.templateSettings = {
         interpolate: /\{\{(.+?)\}\}/g
     };
+    //设置日历默认语言
+    $.datetimepicker.setLocale("ch");
+    
     Utils.tableCheckAll = function ($cont) {
         var _this = this;
         //Master Checkboxes

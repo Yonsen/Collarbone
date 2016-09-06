@@ -25,13 +25,10 @@ define('views/article/form', ['base', 'underscore', 'backbone', 'tools', 'models
         render: function() {
             var _this = this;
             _this.$el.html(_this.template(_this.model.attributes));
+            $('#start_date').datetimepicker();
+            $('#end_date').datetimepicker();
             $('select.dropdown').dropdown();
             $('.ui.checkbox').checkbox();
-            $('.ui.form').form({
-                fields : validationRules,
-                inline : true,
-                on     : 'blur'
-            });
             return _this;
         }
     });

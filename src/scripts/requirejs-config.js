@@ -13,7 +13,9 @@ requirejs.config({
         "jquery": "libs/jquery-3.1.0.min",
         "text": "libs/require.text-2.0.15",
         "backbone": "libs/backbone-1.3.3.min",
-        "underscore": "libs/underscore-1.8.3.min"
+        "underscore": "libs/underscore-1.8.3.min",
+        "jquery-mousewheel": "libs/jquery.mousewheel.min",
+        "jquery/datetimepicker": "libs/jquery.datetimepicker.full.min"
     },
     //配置别名
     map: {
