@@ -45,9 +45,12 @@ body {
 #menu .item {
     margin: 0;
     padding: 0;
-    height: 50px;
     border-radius: 0;
     overflow: hidden;
+}
+#menu .content {
+    margin: 0;
+    padding: 0;
 }
 #menu .title {
     color: #adb3b8;
@@ -61,16 +64,26 @@ body {
     color: #fff;
     background: #3c4a57;
 }
-#menu .title.selected {
+#menu .active {
+    height: auto;
+}
+#menu .title.active {
     padding-left: 10px;
     background: #475360;
     border-left: 5px solid #35baf6;
 }
+#menu .accordion > .title {
+    border-color: transparent;
+}
 #menu .content .title {
     padding-left: 40px;
 }
-#menu .content .title.selected {
+#menu .content .title.active {
     padding-left: 35px;
+}
+#menu .item .title>.dropdown.icon {
+    font-size: 16px;
+    margin-top: 16px;
 }
 #wrapper {
     height: 100%;

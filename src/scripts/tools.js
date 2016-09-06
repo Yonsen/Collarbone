@@ -9,7 +9,7 @@ define("tools", ["base", "underscore", "utils", "jquery/datetimepicker"], functi
     };
     //设置日历默认语言
     $.datetimepicker.setLocale("ch");
-    
+
     Utils.tableCheckAll = function ($cont) {
         var _this = this;
         //Master Checkboxes

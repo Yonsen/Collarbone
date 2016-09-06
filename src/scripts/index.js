@@ -15,31 +15,20 @@ require(["base", "underscore", "backbone", "tools"], function($, _, Backbone, To
         },
         reset: function () {
             var _this = this;
+            _this.$menu.accordion({
+                selector: {
+                    trigger: '.title'
+                }
+            });
         },
         events: function () {
             var _this = this;
             _this.$menu.on("click.a", "a", function (e) {
-                //e.preventDefault();
                 var $this = $(this),
-                    $li = $this.closest("li"),
-                    $ul = $this.next("ul");
-                if($ul.length){ //有子菜单
-                    if($li.hasClass("open")){ //已展开
-                        $li.removeClass("open");
-                        $(".fa.fr", $this).toggleClass("fa-caret-down fa-caret-right");
-                        $li.stop(true, true).animate({
-                            height: $this.height()
-                        }, 300);
-                    }else{
-                        $li.addClass("open");
-                        $(".fa.fr", $this).toggleClass("fa-caret-down fa-caret-right");
-                        $li.stop(true, true).animate({
-                            height: $this.height() + $ul.outerHeight(true)
-                        }, 300);
-                    }
-                }else{
-                    $("a.selected", _this.$menu).removeClass("selected");
-                    $this.addClass("selected");
+                    $ul = $this.next(".content");
+                if(!$ul.length){
+                    $("a.active", _this.$menu).removeClass("active");
+                    $this.addClass("active");
                 }
             });
             $(window).on("resize", function (e) {

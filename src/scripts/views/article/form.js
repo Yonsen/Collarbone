@@ -4,7 +4,7 @@
 define('views/article/form', ['base', 'underscore', 'backbone', 'tools', 'models/article', 'text!/pages/article/form.html'], function($, _, Backbone, Tools, Article, tmpl){
     'use strict';
     return Backbone.View.extend({
-        ue: UE.getEditor('editor'),
+        ue: UE.getEditor("editor"),
         template: _.template(tmpl),
         // Delegated events for creating new items, and clearing completed ones.
         events: {
@@ -25,8 +25,14 @@ define('views/article/form', ['base', 'underscore', 'backbone', 'tools', 'models
         render: function() {
             var _this = this;
             _this.$el.html(_this.template(_this.model.attributes));
-            $('#start_date').datetimepicker();
-            $('#end_date').datetimepicker();
+            $('#start_date').datetimepicker({
+                timepicker: false,
+                format: 'Y-m-d'
+            });
+            $('#end_date').datetimepicker({
+                timepicker: false,
+                format: 'Y-m-d'
+            });
             $('select.dropdown').dropdown();
             $('.ui.checkbox').checkbox();
             return _this;
