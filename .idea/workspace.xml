@@ -31,16 +31,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.datetimepicker.full.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scripts/libs/jquery.datetimepicker.full.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-940">
-              <caret line="0" column="6085" selection-start-line="0" selection-start-column="6085" selection-end-line="0" selection-end-column="6085" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="form.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/views/article/form.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,11 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/themes/layout.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="528">
               <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/article/form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -181,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/scripts/ueditor/php/action_upload.php" />
         <option value="$PROJECT_DIR$/src/scripts/ueditor/php/Uploader.class.php" />
         <option value="$PROJECT_DIR$/src/scripts/ueditor/php/config.json" />
-        <option value="$PROJECT_DIR$/src/pages/article/form.html" />
         <option value="$PROJECT_DIR$/src/scripts/jquery.datetimepicker.full.js" />
         <option value="$PROJECT_DIR$/src/scripts/libs/jquery.datetimepicker.min.js" />
         <option value="$PROJECT_DIR$/src/scripts/libs/jquery.datetimepicker.full.js" />
@@ -192,6 +191,7 @@
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/scripts/index.js" />
         <option value="$PROJECT_DIR$/src/themes/layout.css" />
+        <option value="$PROJECT_DIR$/src/pages/article/form.html" />
       </list>
     </option>
   </component>
@@ -446,12 +446,12 @@
       <workItem from="1471917074219" duration="25106000" />
       <workItem from="1472113930411" duration="51345000" />
       <workItem from="1472612129308" duration="37410000" />
-      <workItem from="1473040279581" duration="17958000" />
+      <workItem from="1473040279581" duration="18516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143718000" />
+    <option name="totallyTimeSpent" value="144276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -737,16 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/article/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#script#0;n#div#10;n#div#0;n#form#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/jquery.datetimepicker.full.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -845,6 +835,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/article/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
           <folding />
         </state>
       </provider>
